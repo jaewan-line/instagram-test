@@ -11,9 +11,12 @@ const FacebookLoginComponent: React.FC<FacebookLoginProps> = (props) => {
     // Handle the response. This typically involves sending the response to your backend for verification and user session management
   };
 
+  const facebookToken:string=process.env.FACEBOOK_APP_ID || "";
+  console.log(`facebook token ${facebookToken}`)
+
   return (
     <FacebookLogin
-      appId="402239072259325" // Replace with your Facebook App ID
+      appId={facebookToken} // Replace with your Facebook App ID
       autoLoad={true}
       fields="name,email,picture"
       onClick={() => console.log("Facebook login button clicked")}
