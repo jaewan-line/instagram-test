@@ -19,6 +19,7 @@ const FacebookLoginComponent: React.FC<FacebookLoginProps> = (props) => {
       appId={facebookToken} // Replace with your Facebook App ID
       autoLoad={true}
       fields="name,email,picture"
+      scope="instagram_basic,pages_show_list" // Requesting additional permissions
       onClick={() => console.log("Facebook login button clicked")}
       callback={responseFacebook}
       // Optionally add styling or custom button here
